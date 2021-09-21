@@ -19,3 +19,14 @@ C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.
 C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\bin\Debug\EduCenter.exe
 C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\bin\Debug\EduCenter.pdb
 C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.ResolveComReference.cache
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\bin\Debug\EduCenter.exe.config
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.ResolveComReference.cache
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.exe
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.pdb
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\bin\Debug\EduCenter.exe
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\bin\Debug\EduCenter.pdb
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.Form1.resources
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.Properties.Resources.resources
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.Registratsiya.resources
+C:\Users\User\Documents\ShoxGit\Registration\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.GenerateResource.Cache

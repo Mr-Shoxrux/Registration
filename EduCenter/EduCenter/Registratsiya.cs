@@ -58,20 +58,34 @@ namespace EduCenter
             string Familya = textBox1.Text;
             string Ism = textBox2.Text;
             string Tel = textBox3.Text;
-            if (Tel.IndexOf('+').ToString() == "-1")
+            long number1 = 0;
+            bool canConvert = long.TryParse(Tel, out number1);
+            if (Tel.IndexOf('+').ToString() == "-1" && canConvert)
             {
                 if (Familya.Length > 0 && Ism.Length > 0 && Tel.Length > 0 && comboBox1.SelectedValue.ToString().Length > 0 && comboBox2.SelectedValue.ToString().Length > 0)
                 {
-                    Familya = Familya.Replace("'", "`");
-                    Ism = Ism.Replace("'", "`");
-                        
-                    string zapros = "";
-                    zapros += " insert into Talaba (Familya,Ism,TelNomer,FanId,KunId) values('N" + Familya + "','N" + Ism + "','" + Tel + "','" + comboBox1.SelectedValue + "','" + comboBox2.SelectedValue + "' )";
-                    // zapros += "insert into AllUsers (Fullname,UsTypeId,Email,Phone,Ish_joyi) values('" + text_fish.Text + "','" + 2 + "','" + text_email.Text + "','" + text_tel.Text + "','" + text_ish_joyi.Text + "')";
-                    if (DB.db.SetCommand(zapros) == 1)
+                    if ((int)Familya[0] > 125 &&  (int)Ism[0] > 125)
                     {
-                        MessageBox.Show("Saqlandi");
-                        refresh();
+                        Familya = Converter.ConvertToLatin(Familya);
+                        Ism = Converter.ConvertToLatin(Ism);
+                    }
+                    if (Familya != "0" && Ism != "0")
+                    {
+                        Familya = Familya.Replace("'", "`");
+                        Ism = Ism.Replace("'", "`");
+
+                        string zapros = "";
+                        zapros += " insert into Talaba (Familya,Ism,TelNomer,FanId,KunId) values('" + Familya + "','" + Ism + "','" + Tel + "','" + comboBox1.SelectedValue + "','" + comboBox2.SelectedValue + "' )";
+                        // zapros += "insert into AllUsers (Fullname,UsTypeId,Email,Phone,Ish_joyi) values('" + text_fish.Text + "','" + 2 + "','" + text_email.Text + "','" + text_tel.Text + "','" + text_ish_joyi.Text + "')";
+                        if (DB.db.SetCommand(zapros) == 1)
+                        {
+                            MessageBox.Show("Saqlandi");
+                            refresh();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Qayta urinib ko'ring!");
                     }
                 }
                 else
@@ -82,7 +96,7 @@ namespace EduCenter
             }
             else
             {
-                MessageBox.Show("Telefon nomerni quydagi ko'rinishlardan birida kiriting! Namuna: 998941234567 yoki 94-123-45-67");
+                MessageBox.Show("Telefon nomerni quydagi ko'rinishlardan birida kiriting! Namuna: 998941234567 yoki 941234567");
 
             }
 
@@ -235,5 +249,103 @@ namespace EduCenter
        
         }
       
+    }
+    public static class Converter
+    {
+        private static readonly Dictionary<char, string> ConvertedLetters = new Dictionary<char, string>
+    {
+        {'Ҳ',"H"},
+        {'Ғ',"G‘"},
+        {'Қ',"Q"},
+        {'Ў',"O‘"},
+        {'ғ',"g‘"},
+        {'қ',"q"},
+        {'ў',"o‘"},
+        {'ҳ',"h"},
+        {'А',"A"},
+        {'Б',"B"},
+        {'В',"V"},
+        {'Г',"G"},
+        {'Д',"D"},
+        {'Е',"E"},
+        {'Ё',"YO"},
+        {'Ж',"J"},
+        {'З',"Z"},
+        {'И',"I"},
+        {'Й',"Y"},
+        {'К',"K"},
+        {'Л',"L"},
+        {'М',"M"},
+        {'Н',"N"},
+        {'О',"O"},
+        {'П',"P"},
+        {'Р',"R"},
+        {'С',"S"},
+        {'Т',"T"},
+        {'У',"U"},
+        {'Ф',"F"},
+        {'Х',"X"},
+        {'Ц',"S"},
+        {'Ч',"CH"},
+        {'Ш',"SH"},
+        {'Ъ',"’"},
+        {'Э',"E"},
+        {'Ю',"YU"},
+        {'Я',"YA"},
+        {'а',"a"},
+        {'б',"b"},
+        {'в',"v"},
+        {'г',"g"},
+        {'д',"d"},
+        {'е',"e"},
+        {'ё',"yo"},
+        {'±',"yo"},
+        {'ж',"j"},
+        {'з',"z"},
+        {'и',"i"},
+        {'й',"y"},
+        {'к',"k"},
+        {'л',"l"},
+        {'м',"m"},
+        {'н',"n"},
+        {'о',"o"},
+        {'п',"p"},
+        {'р',"r"},
+        {'с',"s"},
+        {'т',"t"},
+        {'у',"u"},
+        {'ф',"f"},
+        {'х',"x"},
+        {'ц',"ts"},
+        {'ч',"ch"},
+        {'ш',"sh"},
+        {'ъ',"'"},
+        {'ь',"'"},
+        {'э',"e"},
+        {'ю',"yu"},
+        {'я',"ya"}
+    };
+
+        public static string ConvertToLatin(string source)
+        {
+           
+                var result = new StringBuilder();
+
+                try
+                {
+                    foreach (var letter in source)
+                    {
+                        result.Append(ConvertedLetters[letter]);
+                    }
+                    return result.ToString();
+
+                }
+                catch
+                {
+                    MessageBox.Show("Ismi yoki Familyada hatolik bor!");
+                }
+                return "0";
+            
+        }
     }
 }
