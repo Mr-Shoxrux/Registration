@@ -1,0 +1,21 @@
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\bin\Debug\EduCenter.exe.config
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\bin\Debug\EduCenter.exe
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\bin\Debug\EduCenter.pdb
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.Form1.resources
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.Properties.Resources.resources
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.exe
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.pdb
+c:\users\user\documents\visual studio 2013\Projects\EduCenter\EduCenter\obj\Debug\EduCenter.Registratsiya.resources
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\bin\Debug\EduCenter.exe.config
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.exe
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.pdb
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.Form1.resources
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.Properties.Resources.resources
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.Registratsiya.resources
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\bin\Debug\EduCenter.exe
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\bin\Debug\EduCenter.pdb
+C:\Users\User\Desktop\EduCenter2\EduCenter\EduCenter\obj\Debug\EduCenter.csproj.ResolveComReference.cache
